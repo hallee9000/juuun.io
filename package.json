@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "juust",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "Jun 的作品展示网站",
+  "version": "0.9.0",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -13,18 +13,26 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "gatsby": "^2.1.31",
+    "gatsby-plugin-sharp": "^2.0.30",
+    "gatsby-plugin-stylus": "^2.0.7",
+    "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-remark-images": "^3.0.10",
+    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-remark": "^2.3.4",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "git@github.com:leadream/juuust.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/leadream/juuust/issues"
   }
 }

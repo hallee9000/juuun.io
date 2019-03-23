@@ -1,0 +1,57 @@
+.portrait{
+  position: relative;
+  width: 150px;
+  margin: 30px auto;
+  padding: 30px 0;
+  .portrait-intro{
+    position: absolute;
+    top: 180px;
+    left: -155px;
+    width: 640px;
+    font-size: 40px;
+    color: #CCC;
+    font-family: Georgia;
+    span{
+      padding: 0 80px;
+    }
+  }
+  .portrait-me{
+    width: 100%;
+  }
+  .portrait-fan{
+    position: absolute;
+    top: 130px;
+    left: 33px;
+    width: 81px;
+    cursor: pointer;
+    transform-origin:10% 76% 0;
+    transition: all 0.6s;
+    &:hover{
+      transform: rotate(-20deg);
+    }
+  }
+  .portrait-propeller{
+    position: absolute;
+    top: 247px;
+    right: 10px;
+    width: 33px;
+    cursor: pointer;
+    transition: all 0.8s;
+    &:hover{
+      transform: rotate(765deg);
+    }
+  }
+}
+@media(max-width:640px){
+  .portrait{
+    .portrait-intro{
+      top: 100px;
+      left: -70px;
+      width: 310px;
+      font-size: 20px;
+      span{
+        padding: 0 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.layout-home{
+  .home-anchor{
+    margin-top: 10px;
+    text-align: center;
+    a{
+      display: inline-block;
+      padding: 0 10px;
+      line-height: 1;
+      color: #999;
+      border-right: 1px solid #DDD;
+      &:hover{
+        color: #333;
+      }
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+  .home-section{
+    padding-top: 36px;
+    .section-title{
+      margin: 0;
+      font-family: system-ui, "Menlo", "Meslo LG", monospace;
+    }
+    .section-description{
+      margin: 0;
+      margin-bottom: 20px;
+      color: #999;
+    }
+    .section-items{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+      .section-item{
+        flex: 0 0 33.333333%;
+        margin-bottom: 20px;
+        padding: 0 15px;
+        .item-card{
+          position: relative;
+          display: block;
+          border: 1px solid #F3F3F3;
+          &:hover{
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.08);
+          }
+          .card-cover{
+            img{
+              display: block;
+              width: 100%;
+            }
+          }
+          .card-title{
+            margin: 0;
+            padding: 10px;
+            font-weight: 400;
+            color: #333;
+          }
+        }
+      }
+    }
+    @media (max-width: 767px) {
+      .section-items{
+        .section-item{
+          flex: 0 0 50%;
+        }
+      }
+    }
+    @media (max-width: 432px) {
+      .section-items{
+        display: block;
+      }
+    }
+  }
+}

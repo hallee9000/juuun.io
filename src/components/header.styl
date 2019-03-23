@@ -1,0 +1,51 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #FFF;
+  transform: translateY(-100px);
+  transition: 0.4s transform;
+  z-index: 1000;
+  &.header-visible{
+    transform: translateY(0);
+  }
+  >nav{
+    display: flex;
+    position: relative;
+    height: 52px;
+    padding: 10px 15px;
+    a{
+      margin-right: 10px;
+      color: #666;
+      &:hover{
+        color: #000;
+      }
+    }
+    .header-logo{
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius:16px;
+      border: 1px solid #EEE;
+      overflow: hidden;
+      &:hover{
+        background: #333;
+      }
+    }
+    .header-anchors{
+      flex: 1;
+      line-height: 32px;
+      text-align: center;
+      visibility: hidden;
+      &.anchors-visible{
+        visibility: visible;
+      }
+    }
+    .header-links{
+      line-height: 32px;
+    }
+  }
+}

@@ -1,14 +1,25 @@
 ---
-title: 找对象小游戏
-date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+title: 猪年找对象
+date: "2016-01-28T22:40:32.169Z"
+description: 一个小游戏，在猪里面找一对象。
 color: '#93B0FF'
 category: creative
 cover: 'find-two-elephants.jpg'
 demo: demos/find-two-elephants.png
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+为了解决过年回家被催婚的难题，我做了这个「猪年找对象」的小游戏。
+
+玩法很简单，就是在一堆图片中找到两只象，单击选中它们就可以得一分，简称「找到一对象」（想想北京话）。
+
+![](./find-two-elephants/overview.png)
+
+所有图片中其实只有猪和象，刚开始可能很好找，无非就是长鼻子短鼻子嘛。但随着等级越来越高，格子越来越多，就不那么好找了，何况还有时间限制。看下面这张图，你能一眼找到一对象吗？
+
+![](./find-two-elephants/harder.jpeg)
+
+不过我的手速还是很快的，毕竟二十几年单身手速，鬼斧神工，无与伦比。你看我轻轻松松就找到了 26 对象。这下行了吧，不是让我找对象嘛，你看我现在找得多快，随随便便找几十对象。
+
+![](./find-two-elephants/result.jpeg)
+
+这就是我今年想到的「反催婚大招」。想玩吗？扫描上面的二维码就可以一起找对象了。

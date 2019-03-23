@@ -10,14 +10,17 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "gatsby": "^2.1.31",
+    "gatsby-plugin-google-tagmanager": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.30",
     "gatsby-plugin-stylus": "^2.0.7",
     "gatsby-remark-copy-linked-files": "^2.0.11",
+    "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.0.10",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-remark": "^2.3.4",
@@ -26,6 +29,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },
   "repository": {

@@ -13,7 +13,7 @@ class Layout extends React.Component {
       <div className="default-layout">
         <Header location={location}/>
         {
-          isHome && <Bio/>
+          isHome && <Bio hasAvatar/>
         }
         {children}
         <Footer/>

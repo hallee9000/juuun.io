@@ -1,13 +1,39 @@
 ---
 title: 北新桥
-date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+date: "2016-05-28T22:40:32.169Z"
+description: 我在北京工作时，公司在东城区北新桥，那里有很多美好的回忆。
 color: '#FFF'
 category: painting
 cover: 'beixinqiao.jpg'
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+去年八月，公司从双井搬到北新桥。新办公地点在人民美术印刷厂所在的院子里最北端的人美大厦。换了新址大家自然想出去探索一番，更何况这附近有很多老胡同。
+
+对面有家不知道属于哪个公司的“员工食堂”。橘色的瓷砖上挂着四个简易的金属字，店内是和食堂一样简单的桌椅，菜单上为数不多的几个粤式菜，让你感觉好像去了南方某个小城市。“员工食堂”菜式虽少，味道却还都不错，而我最喜欢的是烧鸭饭。
+
+![](./beixinqiao/bxq-canteen.png)
+
+后来，因为拆迁改造“员工食堂”停业了，大家在感慨一家好吃的食堂消失之余又继续寻找新的“食堂”。吃完午饭我们就在附近胡同里溜达，发现还不错的小店就约定时间一起去尝试，最远都到了雍和宫附近。“胡同食堂”就是一家比较远但口味不错的小店，老板是浙江人，他们家的番茄蛋汤里有榨菜，比一般的要好喝。
+
+![](./beixinqiao/bxq-cookshop.png)
+
+从公司出来，在巷子口有一家百年义利，里面有各种零食点心。有时早上我会来这里买三个抹茶蛋糕或巧克力蛋糕当早餐，中午也会跑来买些山楂片、果丹皮、锅巴或薯片做上班零食。
+
+![](./beixinqiao/bxq-yili.png)
+
+附近有家卤煮老店，店不大人却很多，每次去都要等。我喜欢在旁边看师傅剁肠切饼，他们动作娴熟，每份的量都拿捏得正好。
+
+![](./beixinqiao/bxq-luzhu.png)
+
+吃卤煮当然少不了北冰洋，一瓶北冰洋刚好能就一碗卤煮喝完。北冰洋相比于其他饮料会有点冲，但是喝完后有一股气在体内横冲直撞，五脏六腑瞬间通透。
+
+![](./beixinqiao/bxq-arctic.png)
+
+上班前一般会去7-11便利店买一大瓶三得利乌龙茶。可是这种大瓶的三得利会经常缺货，每当它缺货时就感觉这一天都没有精神。
+
+![](./beixinqiao/bxq-suntory.png)
+
+下班通常会坐地铁回去，但有时厌倦了上上下下换乘的麻烦，会走十几分钟到张自忠路坐42路电车。有些电车老旧了，常常半路集电杆就掉了下来，司机会下车重新搭上，抱怨几句后再出发。
+
+![](./beixinqiao/bxq-tram.png)
+

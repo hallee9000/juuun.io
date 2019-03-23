@@ -1,12 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Bio from "../components/bio/index"
 import Portrait from "../components/portrait/index"
 import './about.styl'
 
 export default props =>
   <Layout location={props.location}>
+    <SEO title="关于我"/>
     <div className="layout-about container">
       <Portrait/>
+      <Bio intro="&nbsp;&nbsp;&nbsp;好奇心大于一切。"/>
       <section className="about-section about-base">
         <h3 className="section-label">基本信息</h3>
         <div className="section-content">

@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `zh`,
   meta: [],
-  keywords: [],
+  keywords: [`framer`, `figma`, `Codesigner`, `刷朋友圈的小利器`, `选个电影`, `脑洞没边儿`, `程序猿的婚礼邀请函`, `即刻 Sketch 插件`, `爱长沙的 26 个理由`],
 }
 
 SEO.propTypes = {

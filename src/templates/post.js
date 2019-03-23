@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, withPrefix, graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import './post.styl'
 
 class PostTemplate extends React.Component {
@@ -13,6 +14,10 @@ class PostTemplate extends React.Component {
     const isLinkDemo = hasDemo ? demo.indexOf('http') > -1 : true
     return (
       <Layout location={this.props.location}>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
         <div className="layout-post">
           <div className="post-banner">
             <div

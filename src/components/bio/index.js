@@ -35,11 +35,15 @@ class Bio extends React.Component {
   }
   render () {
     const { mailActiveClass } = this.state
+    const { hasAvatar, intro } = this.props
     return (
       <div className="layout-bio container">
-        <div className="bio-avatar">
-          <img src={avatar} alt="头像"/>
-        </div>
+        {
+          hasAvatar &&
+          <div className="bio-avatar">
+            <img src={avatar} alt="头像"/>
+          </div>
+        }
         <div className="bio-social">
           <a href="#wechat" target="_blank" rel="noopener noreferrer" onClick={this.onClickWechat}>
             <img src={wechat} alt="微信"/>
@@ -60,7 +64,7 @@ class Bio extends React.Component {
           </a>
         </div>
         <div className="bio-intro">
-          嗨！我是产品设计师 Jun。不知道该如何介绍自己，往下翻看我的作品了解我吧。
+          {intro || '嗨！我是产品设计师 Jun。不知道该如何介绍自己，往下翻看我的作品了解我吧。'}
         </div>
       </div>
     )

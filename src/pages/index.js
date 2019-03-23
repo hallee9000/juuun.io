@@ -47,7 +47,6 @@ export default class extends React.Component {
       <Layout location={this.props.location}>
         <SEO
           title="首页"
-          keywords={[`framer`, `figma`, `Codesigner`, `选个电影`, `脑洞没边儿`, `程序猿的婚礼邀请函`, `即刻 Sketch 插件`, `长沙`]}
         />
         <div className="layout-home container">
           <div className="home-anchor">

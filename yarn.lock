@@ -4596,12 +4596,10 @@ gatsby-link@^2.0.16:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-google-tagmanager@^2.0.10:
-  version "2.0.10"
-  resolved "http://registry.npm.taobao.org/gatsby-plugin-google-tagmanager/download/gatsby-plugin-google-tagmanager-2.0.10.tgz#36e8b77afa28c83e0c3b16be5b6a88956c9e3447"
-  integrity sha1-Nui3evooyD4MOxa+W2qIlWyeNEc=
-  dependencies:
-    "@babel/runtime" "^7.0.0"
+gatsby-plugin-gtag@^1.0.10:
+  version "1.0.10"
+  resolved "http://registry.npm.taobao.org/gatsby-plugin-gtag/download/gatsby-plugin-gtag-1.0.10.tgz#6e181ba67319adff2f1512ba23369954e8117d1c"
+  integrity sha1-bhgbpnMZrf8vFRK6IzaZVOgRfRw=
 
 gatsby-plugin-page-creator@^2.0.10:
   version "2.0.10"

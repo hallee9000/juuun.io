@@ -43,16 +43,15 @@ module.exports = {
     },
     // 谷歌统计插件
     {
-      resolve: `gatsby-plugin-google-tagmanager`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        id: "UA-121774282-2",
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: false,
-        // Specify optional GTM environment details.
-        // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
-        // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+        // your google analytics tracking id
+        trackingId: `UA-121774282-2`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
       },
-    },
+    }
   ]
 }

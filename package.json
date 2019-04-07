@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "gatsby build && gh-pages -d public"
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -29,14 +29,13 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1",
     "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:leadream/juuust.git"
+    "url": "git@github.com:leadream/juuun.io.git"
   },
   "bugs": {
-    "url": "https://github.com/leadream/juuust/issues"
+    "url": "https://github.com/leadream/juuun.io/issues"
   }
 }

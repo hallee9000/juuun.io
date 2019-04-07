@@ -18,6 +18,6 @@ git add -A
 git commit -m '由本地发布'
 
 # 如果发布到 CODING Pages
-git push -f git@github.com:leadream/juuust.git master:gh-pages
+git push -f git@github.com:leadream/juuun.io.git master:gh-pages
 
 cd -

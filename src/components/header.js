@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
-import avatar from './bio/images/avatar.png'
+import { Link, withPrefix } from 'gatsby'
 import './header.styl'
 
 export default class extends React.Component {
@@ -9,51 +8,33 @@ export default class extends React.Component {
     const { location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const isHome = location.pathname === rootPath
-    this.state = {headerVisible: false, isHome}
-  }
-  headerClassName = (headerVisible) => {
-    const { isHome } = this.state
-    if (isHome) {
-      return `header ${headerVisible ? 'header-visible' : ''}`
-    } else {
-      return 'header header-visible'
-    }
+    const isAbout = location.pathname === `${rootPath}about`
+    const isPortfolio = /^\/portfolio/.test(location.pathname)
+    this.state = {isHome, isPortfolio, isAbout, portfolioVisible: false}
   }
   componentDidMount () {
-    const { isHome } = this.state
-    if (isHome) {
-      let currentScrollHeight = window.pageYOffset
-      window.onscroll = () => {
-        currentScrollHeight = window.pageYOffset
-        if(currentScrollHeight > 230){
-          this.setState({headerVisible: true})
-        }else{
-          this.setState({headerVisible: false})
-        }
-      }
+    const { isPortfolio } = this.state
+    const canViewPortfolio = localStorage.getItem('portfolio')
+    if (canViewPortfolio || isPortfolio) {
+      this.setState({portfolioVisible: true})
     }
   }
-  componentWillUnmount () {
-    window.onscroll = null
-  }
   render () {
-    const { isHome, headerVisible } = this.state
+    const { isHome, isPortfolio, isAbout, portfolioVisible } = this.state
     return (
-      <header className={this.headerClassName(headerVisible)}>
+      <header className="header">
         <nav className="container">
           <Link className="header-logo" to="/" rel="home">
-            <img src={avatar} alt="我的头像"/>
+            <img src={withPrefix('/avatar.png')} alt="我的头像"/>
           </Link>
-          <div className={`header-anchors ${isHome ? 'anchors-visible' : ''}`}>
-            <a href="#projects">项目</a>
-            <a href="#tools">工具</a>
-            <a href="#creative">脑洞</a>
-            <a href="#writing">写作</a>
-            <a href="#painting">画画</a>
-          </div>
+          <div className="stretched-box"/>
           <div className="header-links">
-            <Link to="/" rel="home">首页</Link>
-            <Link to="/about" rel="about">关于我</Link>
+            <Link to="/" rel="home" className={isHome ? 'active' : ''}>首页</Link>
+            {
+              portfolioVisible &&
+              <Link to="/portfolio" rel="portfolio" className={isPortfolio ? 'active' : ''}>作品集</Link>
+            }
+            <Link to="/about" rel="about" className={isAbout ? 'active' : ''}>关于我</Link>
           </div>
         </nav>
       </header>

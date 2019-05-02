@@ -8,7 +8,7 @@ class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
-    const cover = withPrefix(`heros/${post.frontmatter.cover}`)
+    const cover = withPrefix(post.frontmatter.cover)
     const { demo, demoText } = post.frontmatter
     const hasDemo = !!demo
     const isLinkDemo = hasDemo ? demo.indexOf('http') > -1 : true

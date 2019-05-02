@@ -1,5 +1,5 @@
 import React from 'react'
-import avatar from './images/avatar.png'
+import { withPrefix } from "gatsby"
 import wechat from './images/wechat.svg'
 import qrcode from './images/qrcode.jpg'
 import github from './images/github.svg'
@@ -41,7 +41,7 @@ class Bio extends React.Component {
         {
           hasAvatar &&
           <div className="bio-avatar">
-            <img src={avatar} alt="头像"/>
+            <img src={withPrefix('/avatar.png')} alt="头像"/>
           </div>
         }
         <div className="bio-social">
@@ -64,7 +64,7 @@ class Bio extends React.Component {
           </a>
         </div>
         <div className="bio-intro">
-          {intro || '嗨！我是产品设计师 Jun。不知道该如何介绍自己，往下翻看我的作品了解我吧。'}
+          {intro || '嗨！我是产品设计师 Jun。不知道该如何介绍自己，往下翻看我做的东西了解我吧。'}
         </div>
       </div>
     )

@@ -24,8 +24,7 @@ export default props =>
       <section className="about-section about-work">
         <h3 className="section-label">工作经历</h3>
         <div className="section-content">
-          <div>2018.7-至今 / CODING / 产品经理</div>
-          <div>2018.4-2018.7 / CODING / 用户体验设计师</div>
+          <div>2018.4-至今 / CODING / 交互设计师</div>
           <div>2017.3-2018.4 / crazybaby / 前端开发</div>
           <div>2014.9-2016.7 / 乐童音乐 / 前端开发&产品设计</div>
         </div>

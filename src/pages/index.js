@@ -2,6 +2,7 @@ import React from "react"
 import { Link, withPrefix, graphql } from "gatsby"
 import Layout from "../components/layout"
 import './home.styl'
+import Bio from "../components/bio"
 import SEO from '../components/seo'
 
 export default class extends React.Component {
@@ -29,8 +30,7 @@ export default class extends React.Component {
     if (!this.isGrouped) {
       // eslint-disable-next-line
       posts.map(({node}) => {
-        const slug = node.fields.slug
-        const category = slug.split('/')[1]
+        const { category } = node.frontmatter
         if (groupedPosts[category].posts) {
           groupedPosts[category].posts.push(node)
         } else {
@@ -49,6 +49,7 @@ export default class extends React.Component {
           title="首页"
         />
         <div className="layout-home container">
+          <Bio hasAvatar/>
           <div className="home-anchor">
             <a href="#projects">项目</a>
             <a href="#tools">工具</a>
@@ -67,7 +68,7 @@ export default class extends React.Component {
                       <li className="section-item" key={post.id}>
                         <Link to={post.fields.slug} className="item-card">
                           <div className="card-cover">
-                            <img src={withPrefix(`heros/${post.frontmatter.cover}`)} alt={post.frontmatter.title}/>
+                            <img src={withPrefix(post.frontmatter.cover)} alt={post.frontmatter.title}/>
                           </div>
                           <p className="card-title">{post.frontmatter.title}</p>
                         </Link>
@@ -86,7 +87,10 @@ export default class extends React.Component {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: {regex : "^\/works\/"} }
+      sort: { fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           id
@@ -99,6 +103,7 @@ export const query = graphql`
             description
             color
             cover
+            category
           }
         }
       }

@@ -11,7 +11,7 @@ export default class extends React.Component {
     textContent: ''
   }
   componentDidMount () {
-    axios.get('https://lab.juuust.com/api/douban/movie/top250', {
+    axios.get('https://juuust.com/api/douban/movie/top250', {
       header:{
         'Content-Type':'application/json'
       },

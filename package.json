@@ -14,7 +14,7 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "gatsby": "^2.1.31",
     "gatsby-plugin-gtag": "^1.0.10",
     "gatsby-plugin-sharp": "^2.0.30",
@@ -24,6 +24,7 @@
     "gatsby-remark-images": "^3.0.10",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-remark": "^2.3.4",
+    "js-yaml": "^3.13.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0"

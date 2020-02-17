@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Projects",
+    "brief": "我自己设计开发的一些网站。"
+  },
+  {
+    "category": "Tools",
+    "brief": "我做的一些小工具。"
+  },
+  {
+    "category": "Creative",
+    "brief": "一些脑洞大开的小创意。"
+  },
+  {
+    "category": "Writing",
+    "brief": "我写的文章和电子书。"
+  },
+  {
+    "category": "Painting",
+    "brief": "我画的画。"
+  }
+]

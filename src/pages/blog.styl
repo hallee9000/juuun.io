@@ -1,0 +1,71 @@
+@import '../assets/token.styl'
+
+.layout-blog{
+  max-width: 800px;
+  padding-top: 108px;
+  .blog-title{
+    margin: 0;
+    font-family: system-ui, "Menlo", "Meslo LG", monospace;
+  }
+  .blog-description{
+    margin: 0;
+    margin-bottom: 15px;
+    color: #999;
+  }
+  .blog-section{
+    .blog-year{
+      margin: 0;
+      font-weight: 900;
+      color: #999;
+      border-bottom: 1px solid #F3F3F3
+      background-color: #FFF;
+    }
+    .blog-posts{
+      margin-top: 15px;
+      padding-bottom: 15px;
+      .blog-post{
+        margin-bottom: 10px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .post-link{
+          position: relative;
+          color: #333;
+          &:hover{
+            .post-title{
+              color: primary-color;
+            }
+          }
+          .post-main{
+            display: flex;
+            .post-title{
+              margin: 0;
+              font-weight: 900;
+              transition: color 0.2s;
+            }
+            .post-stretch{
+              flex: 1;
+            }
+            .post-date{
+              color: #666;
+            }
+          }
+          .post-tags{
+            color: #666;
+            font-size: 14px;
+          }
+        }
+        @media (max-width: 767px) {
+          .post-link{
+            .post-main{
+              display: block;
+              .post-stretch{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

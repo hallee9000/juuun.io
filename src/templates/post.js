@@ -8,7 +8,9 @@ class PostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const { previous, next } = this.props.pageContext
-    const cover = withPrefix(`heros/${post.frontmatter.cover}`)
+    const cover = post.frontmatter.cover ? withPrefix(`heroes/${post.frontmatter.cover}`) : ''
+    const bgImageStyle = cover ? {backgroundImage: `url(${cover})`} : {}
+    const bgColor = post.frontmatter.color || '#333'
     const { demo, demoText } = post.frontmatter
     const hasDemo = !!demo
     const isLinkDemo = hasDemo ? demo.indexOf('http') > -1 : true
@@ -22,7 +24,7 @@ class PostTemplate extends React.Component {
           <div className="post-banner">
             <div
               className="banner-background"
-              style={{backgroundColor: post.frontmatter.color, backgroundImage: `url(${cover})`}}
+              style={{backgroundColor: bgColor, ...bgImageStyle}}
             />
             <div className="banner-text">
               <div className="container">
@@ -48,20 +50,24 @@ class PostTemplate extends React.Component {
             }
             <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
             <ul className="post-footer">
-              <li>
-                {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                </Link>
-                )}
-              </li>
+              {
+                previous &&
+                <li className="footer-nav footer-nav-prev">
+                  <span>上一篇：</span>
+                  <Link to={previous.fields.slug} rel="prev">
+                    {previous.frontmatter.title}
+                  </Link>
+                </li>
+              }
+              {
+                next &&
+                <li className="footer-nav footer-nav-next">
+                  <span>下一篇：</span>
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title}
+                  </Link>
+                </li>
+              }
             </ul>
           </div>
         </div>

@@ -113,31 +113,42 @@
     >p{
       margin-bottom: 20px;
     }
+    >p code,
+    >ul code,
+    >ol code {
+      display: inline;
+      font-size: 13px;
+      font-weight: 400;
+      margin: 0 2px;
+      padding: 2px 6px;
+      background: #EEE;
+      white-space: nowrap;
+      border-radius: 2px;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+    >pre{
+      code{
+        position: relative;
+        display: block;
+        margin: 10px 0;
+        padding: 15px 20px;
+        font-weight: normal;
+        border: 1px solid #F3F3F3;
+        border-radius: 2px;
+        background: #FAFBFC;
+        overflow-x: scroll;
+      }
+    }
     .content-image{
       margin:50px auto;
       text-align: center;
     }
   }
   .post-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
     padding: 20px 0;
-    .ending-prev{
-      left: 0;
-      div.hidden-xs{
-        text-align: left;
-      }
-    }
-    .ending-next{
-      right: 0;
-      div.hidden-xs{
-        text-align: right;
-      }
-    }
-    @media (max-width: 767px){
-      a.ending-nav{ width: 50px; }
+    .footer-nav{
+      margin-bottom: 5px;
     }
   }
 }

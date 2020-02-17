@@ -10,10 +10,12 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-stylus',
+    'gatsby-plugin-feed',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-plugin-sharp`,
           {
             resolve: "gatsby-remark-external-links",
             options: {
@@ -38,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content`,
       },
     },
     // 谷歌统计插件

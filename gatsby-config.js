@@ -3,7 +3,7 @@ module.exports = {
     title: `Juuun's World`,
     author: `Juuun`,
     description: `Jun 的世界。`,
-    siteUrl: `https://juuust.com/`,
+    siteUrl: `https://juuun.io/`,
     social: {
       github: `leadream`,
     },

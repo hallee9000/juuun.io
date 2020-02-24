@@ -16,7 +16,7 @@ export default props =>
       <section className="about-section about-base">
         <h3 className="section-label">基本信息</h3>
         <div className="section-content">
-          深圳 / leadream4@gamil.com
+          深圳 / leadream4@gmail.com
         </div>
       </section>
       <section className="about-section about-education">

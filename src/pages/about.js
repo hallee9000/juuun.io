@@ -11,7 +11,7 @@ export default props =>
       <Portrait/>
       <section className="about-section">
         <h3 className="section-label">关于我</h3>
-        <p>我是一名从前端开发转行而来的产品设计师，平时喜做一些无用而<del>有趣</del>的东西，对工具类产品保持着极大的兴趣。<br/><br/><b>目前我正在寻找一份交互设计的工作，如果您正好也在寻找一位设计师可以联系我。</b></p>
+        <p>我是一名从前端开发转行而来的产品设计师，平时喜做一些无用而<del>有趣</del>的东西。<b>我对设计系统及设计交付到开发颇有研究，对工具类产品保持着极大的兴趣。</b><br/><br/>目前我正在寻找一份交互设计的工作，如果您正好也在寻找一位设计师可以联系我。</p>
       </section>
       <section className="about-section about-base">
         <h3 className="section-label">基本信息</h3>

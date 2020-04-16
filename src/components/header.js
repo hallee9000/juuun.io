@@ -60,6 +60,7 @@ export default class Header extends React.Component {
           <div className={cn('header-links', {'header-links-hidden': socialVisible})}>
             <Link to="/" rel="home" className={this.getLinkClass('/')}>作品</Link>
             <Link to="/blog" rel="home" className={this.getLinkClass('/blog')}>文章</Link>
+            <Link to="/cold" rel="cold" className={this.getLinkClass('/cold')}>-85°C</Link>
             <Link to="/about" rel="about" className={this.getLinkClass('/about')}>关于我<span>我在找工作</span></Link>
           </div>
           <div className="header-stretch"/>

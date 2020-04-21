@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from 'gatsby'
 import cn from "classnames"
-import AV from 'leancloud-storage'
+import AV from 'leancloud-storage/dist/av-min'
 import { relativeTime } from '../utils/date'
 import SEO from "../components/seo"
 import Home from "../components/icons/Home"
@@ -9,18 +9,20 @@ import Temperature from "../components/cold/Temperature"
 import Comment from "../components/icons/Comment"
 import './cold.styl'
 
-AV.init({
-  serverURL: 'https://api.framercn.com',
-  appId: 'kjcS77HUsT0IcrFubkguM4lF-gzGzoHsz',
-  appKey: 'VFeBxiCvxWK6DtTRumxUVjSo'
-})
-
 export default () => {
   const [posts, setPosts] = useState([])
   const [visibleId, setVisibleId] = useState()
   const [toastVisible, setToastVisible] = useState(false)
   const [toast, setToast] = useState('未完成功能')
   let timeId
+
+  const initAv = () => {
+    AV.init({
+      serverURL: 'https://api.framercn.com',
+      appId: 'kjcS77HUsT0IcrFubkguM4lF-gzGzoHsz',
+      appKey: 'VFeBxiCvxWK6DtTRumxUVjSo'
+    })
+  }
 
   const handleDismiss = () => {
     setVisibleId()
@@ -36,6 +38,7 @@ export default () => {
   }
 
   useEffect(() => {
+    initAv()
     const query = new AV.Query('MyNewTimeline')
     query.equalTo('isValid', true)
     query.descending('createdAt')

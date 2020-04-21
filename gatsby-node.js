@@ -51,13 +51,28 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-	const { createNodeField } = actions
-	if (node.internal.type === `MarkdownRemark`) {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode })
-		createNodeField({
-			node,
-			name: `slug`,
-			value: slug
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug
     })
-	}
+  }
+}
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /leancloud-storage/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
 }

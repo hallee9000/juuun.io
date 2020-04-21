@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Cloud } from 'leancloud-storage'
+import { Cloud } from 'leancloud-storage/dist/av-min'
 import Snow from "../icons/Snow"
 
 const noop = () => {}

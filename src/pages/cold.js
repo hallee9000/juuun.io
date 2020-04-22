@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
-import cn from "classnames"
+import cn from 'classnames'
 import AV from 'leancloud-storage/dist/av-min'
 import { relativeTime } from '../utils/date'
-import SEO from "../components/seo"
-import Home from "../components/icons/Home"
-import Temperature from "../components/cold/Temperature"
-import Comment from "../components/icons/Comment"
+import SEO from '../components/seo'
+import Home from '../components/icons/Home'
+import Temperature from '../components/cold/Temperature'
+import Comment from '../components/icons/Comment'
 import './cold.styl'
 
 export default () => {
@@ -78,7 +78,8 @@ export default () => {
                         postId={objectId}
                         defaultTemperature={temperature}
                         index={index}
-                        onColder={() => toggleToast('多穿点儿')}
+                        onColder={step => toggleToast(step>0 ? '多穿点儿' : '少穿点儿')}
+                        onColdest={() => toggleToast('已经是最低温度')}
                       />
                       <span
                         className="overlay-action"

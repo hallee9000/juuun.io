@@ -1,3 +1,5 @@
+@import '../assets/token.styl'
+
 .layout-cold{
   position: relative;
   max-width: 568px!important;
@@ -119,7 +121,7 @@
               position: absolute;
               top: -13px;
               right: 40px;
-              width: 180px;
+              width: 190px;
               padding: 12px 0;
               background: #2F2F2F;
               border-radius: 4px;
@@ -135,6 +137,9 @@
                 color: #FFF;
                 &:first-child{
                   border-right: 1px solid #2A2A2A;
+                }
+                &-frozen{
+                  color: primary-color;
                 }
                 svg{
                   vertical-align: middle;

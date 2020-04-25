@@ -4,9 +4,11 @@ import cn from 'classnames'
 import AV from 'leancloud-storage/dist/av-min'
 import { relativeTime } from '../utils/date'
 import SEO from '../components/seo'
-import Home from '../components/icons/Home'
 import Temperature from '../components/cold/Temperature'
+import Home from '../components/icons/Home'
 import Comment from '../components/icons/Comment'
+import Aperture from '../components/icons/Aperture'
+import avatar from '../images/cold/avatar-playing.jpg'
 import './cold.styl'
 
 export default () => {
@@ -54,15 +56,17 @@ export default () => {
       <div className="tl-cover">
         <Link to="/" rel="home" className="cover-home"><Home size={24}/></Link>
         <span>Juuun</span>
-        <img src="/cold/avatar-playing.jpg" alt="头像"/>
+        <img src={avatar} alt="头像"/>
         <div>你要觉得冷可以把空调制热打开</div>
       </div>
       <ul className="tl-items">
         {
+          posts.length===0 ?
+          <li className="tl-loading"><Aperture size={18}/> <span>降温中……</span></li> :
           posts.map(({objectId, content, temperature, createdAt}, index) =>
             <li className="tl-item" key={index}>
               <div className="item-avatar">
-                <img src="/cold/avatar-playing.jpg" alt="头像"/>
+                <img src={avatar} alt="头像"/>
               </div>
               <div className="item-content">
                 <div className="content-nickname">Juuun</div>

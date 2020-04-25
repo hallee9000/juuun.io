@@ -8,6 +8,7 @@ module.exports = {
       github: `leadream`,
     },
   },
+  assetPrefix: 'https://cdn.jsdelivr.net/gh/leadream/juuun.io@gh-pages',
   plugins: [
     'gatsby-plugin-stylus',
     {

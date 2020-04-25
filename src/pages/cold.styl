@@ -11,7 +11,7 @@
     padding-top: 80%;
     background-size: cover;
     background-position: center;
-    background-image: url(/cold/cover.png);
+    background-image: url(../images/cold/cover.png);
     .cover-home{
       position: absolute;
       top: 12px;
@@ -44,6 +44,17 @@
   }
   .tl-items{
     font-size: 14px;
+    .tl-loading{
+      text-align: center;
+      color #999;
+      svg,
+      span{
+        vertical-align: middle;
+      }
+      svg{
+        animation: rotating 0.8s infinite;
+      }
+    }
     .tl-item{
       display: flex;
       padding: 12px;
@@ -186,4 +197,9 @@
       opacity: 1;
     }
   }
+}
+
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

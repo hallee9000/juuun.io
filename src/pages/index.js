@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, withPrefix, graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import workPosts from "./work.json"
 import './home.styl'
@@ -30,7 +30,7 @@ export default ({location, data}) => {
                     <li className="section-item" key={post.id}>
                       <Link to={post.fields.slug} className="item-card">
                         <div className="card-cover">
-                          <img src={withPrefix(`heroes/${post.frontmatter.cover}`)} alt={post.frontmatter.workTitle}/>
+                          <img src={require(`../images/heroes/${post.frontmatter.cover}`)} alt={post.frontmatter.workTitle}/>
                         </div>
                         <p className="card-title">{post.frontmatter.workTitle}</p>
                       </Link>

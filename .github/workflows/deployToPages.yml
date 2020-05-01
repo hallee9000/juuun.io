@@ -13,7 +13,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: ls
     - run: npm install
     - run: npm run build
     - run: cd public

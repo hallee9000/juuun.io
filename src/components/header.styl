@@ -12,6 +12,7 @@
     height: 62px;
     padding: 10px 15px;
     .header-logo{
+      flex-shrink: 0;
       display: block;
       width: 42px;
       height: 42px;
@@ -24,6 +25,8 @@
       }
     }
     .header-links{
+      display: flex;
+      align-items: center;
       &-hidden{
         display: none;
       }
@@ -43,6 +46,9 @@
           line-height: 18px;
           font-size: 12px;
           color: #f24e1d;
+        }
+        >img{
+          display: block;
         }
       }
     }
@@ -108,6 +114,9 @@
             transform: translateY(10px);
           }
         }
+        &.header-badge{
+          display: none;
+        }
         &:hover{
           .social-qrcode{
             visibility: visible;
@@ -128,15 +137,21 @@
       }
     }
   }
-  @media (max-width: 432px) {
+  @media (max-width: 768px) {
     >nav{
       .header-links{
         a{
           margin-right: 12px;
+          &.header-badge{
+            display: none;
+          }
         }
       }
       .header-social{
         display: none;
+        .header-badge{
+          display: block!important;
+        }
       }
       .header-mobile{
         display: block;

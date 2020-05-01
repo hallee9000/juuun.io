@@ -10,6 +10,7 @@ import rss from './images/rss.svg'
 import menu from './images/menu.svg'
 import close from './images/close.svg'
 import qrcode from './images/qrcode.jpg'
+import Badge from './badge'
 import './header.styl'
 
 let timeId
@@ -62,6 +63,7 @@ export default class Header extends React.Component {
             <Link to="/blog" rel="home" className={this.getLinkClass('/blog')}>文章</Link>
             <Link to="/cold" rel="cold" className={this.getLinkClass('/cold')}>-85°C</Link>
             <Link to="/about" rel="about" className={this.getLinkClass('/about')}>关于我</Link>
+            <Badge/>
           </div>
           <div className="header-stretch"/>
           <div className={cn('header-social', {'header-social-visible': socialVisible})}>
@@ -85,6 +87,7 @@ export default class Header extends React.Component {
             <a href="/rss.xml" title="RSS" target="_blank" rel="noopener noreferrer">
               <img src={rss} alt="RSS"/>
             </a>
+            <Badge/>
           </div>
           <button className="header-mobile" onClick={this.toggleSocialVisible}>
             {

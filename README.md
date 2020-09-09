@@ -25,7 +25,7 @@
     ```sh
     cd juuun.io/
     yarn install
-    yarn develop
+    yarn dev
     ```
 
     现在你的网站运行在 `http://localhost:8000`!

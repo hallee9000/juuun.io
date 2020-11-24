@@ -25,17 +25,17 @@
     ```sh
     cd juuun.io/
     yarn install
-    yarn develop
+    yarn dev
     ```
+    
+    **注意：因为引入了图像处理的 Gatsby sharp 插件，在 Mac 下需要手动执行 `brew install libpng` 来安装 libpng 包，否则无法正常编译**
 
     现在你的网站运行在 `http://localhost:8000`!
 
 3.  **部署到 Github Pages**
 
-    部署脚本在 `deploy.sh` 内，请先将里面的仓库地址改为自己的。当你完成开发时，运行 `yarn deploy` 来执行该脚本。它会做两件事：
-    - 构建静态文件至 `public` 文件夹
-    - 将此文件夹内的文件推送至仓库 `gh-pages` 分支
-    完成后，你就可以去 Github 上设置 Pages 了。
+    目前使用 [GitHub Actions](https://github.com/features/actions) 自动部署到 GitHub Pages，你需要在 setting 里面添加一个叫做 TOKEN 的 secret。
+    自动部署文件：https://github.com/leadream/juuun.io/blob/master/.github/workflows/deployToPages.yml
 
 ## 🧐 里面有啥?
 

@@ -1,0 +1,29 @@
+.clubhouse{
+  margin-top: 63px;
+  margin-bottom: -20px;
+  background: #F1EFE3;
+  .clubhouse-container {
+    display: flex;
+    padding: 15px;
+    >* {
+      width: 50%;
+      flex-basis: 50%;
+    }
+    .clubhouse-form {
+      label {
+        display: flex;
+        margin-bottom: 12px;
+        b {
+          width: 80px;
+        }
+      }
+    }
+    .clubhouse-preview {
+      canvas {
+        width: 100%;
+        max-width: 240px;
+        border: 1px solid #C9C6B5;
+      }
+    }
+  }
+}
